@@ -9,39 +9,28 @@ interface Props {
   desc: string;
 }
 
-const Section2: FC<Props> = ({
-  title,
-  desc,
-}) => {
+const Section2: FC<Props> = ({ title, desc }) => {
   return (
-    <div className="flex justify-center items-center bg-[#17EB1F]">
-      <div className="max-w-[1200px] mx-auto py-[100px] mobile:py-[45px] mobile:p-[24px]">
+    <div className="flex items-center justify-center bg-[#17EB1F]">
+      <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[24px] mobile:py-[45px]">
         <div>
-          <h1 className="font-bold text-[65px] text-[#231F20] leading-[64px] whitespace-pre-line">{title}</h1>
-          <p className="mt-[22px] mobile:mt-[14px] font-normal text-[18px] text-[#231F20] leading-[21px]">{desc}</p>
+          <h1 className="whitespace-pre-line font-bold text-[65px] leading-[64px] text-[#231F20]">
+            {title}
+          </h1>
+          <p className="mt-[22px] text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px]">
+            {desc}
+          </p>
         </div>
         <div>
-          <div className="mt-[62px] mobile:mt-[55px] flex justify-center gap-[40px]">
-            <Image
-              alt={"s1"}
-              src={s1}
-              className="w-[200px] aspect-[200/195]"
-            />
-            <Image
-              alt={"s2"}
-              src={s2}
-              className="w-[256px] aspect-[256/235]"
-            />
+          <div className="mt-[62px] flex justify-center gap-[40px] mobile:mt-[55px]">
+            <Image alt={"s1"} src={s1} className="aspect-[200/195] w-[200px]" />
+            <Image alt={"s2"} src={s2} className="aspect-[256/235] w-[256px]" />
           </div>
-          <Image
-            alt={"s3"}
-            src={s3}
-            className="w-[299px] aspect-[299/416]"
-          />
+          <Image alt={"s3"} src={s3} className="aspect-[299/416] w-[299px]" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Section2;

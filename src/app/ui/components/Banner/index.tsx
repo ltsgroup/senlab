@@ -6,29 +6,29 @@ interface Props {
   title: string;
   desc: string;
   btnLabel1: string;
-  btnLabel2: string; 
+  btnLabel2: string;
 }
 
-const Banner: FC<Props> = ({
-  title,
-  desc,
-  btnLabel1,
-  btnLabel2
-}) => {
+const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
   return (
-    <div className="flex justify-center items-center bg-[#185BEA]">
-      <div className="max-w-[1200px] mx-auto py-[124px] mobile:py-[80px] mobile:p-[24px]">
+    <div className="flex items-center justify-center bg-[#185BEA]">
+      <div className="mx-auto max-w-[1200px] py-[124px] mobile:p-[24px] mobile:py-[80px]">
         <div className="text-center">
-          <h1 className="font-bold text-[65px] text-[#17EB1F] leading-[64px] whitespace-pre-line">{title}</h1>
-          <p className="mt-[22px] mobile:mt-[14px] w-[70%] mx-auto font-normal text-[18px] text-[#FFFFFF] leading-[21px]">{desc}</p>
+          <h1 className="whitespace-pre-line font-bold text-[65px] leading-[64px] text-[#17EB1F]">
+            {title}
+          </h1>
+          <p className="mx-auto mt-[22px] w-[70%] text-[18px] font-normal leading-[21px] text-[#FFFFFF] mobile:mt-[14px]">
+            {desc}
+          </p>
+          <div className="text-gray-alpha-200">đáádasdsad</div>
         </div>
-        <div className="mt-[62px] mobile:mt-[55px] flex justify-center gap-[40px]">
+        <div className="mt-[62px] flex justify-center gap-[40px] mobile:mt-[55px]">
           <PrimaryBtn label={btnLabel1} />
           <SecondaryBtn label={btnLabel2} />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Banner;
