@@ -20,7 +20,6 @@ const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
           <p className="mx-auto mt-[22px] w-[70%] text-[18px] font-normal leading-[21px] text-[#FFFFFF] mobile:mt-[14px]">
             {desc}
           </p>
-          <div className="text-gray-alpha-200">đáádasdsad</div>
         </div>
         <div className="mt-[62px] flex justify-center gap-[40px] mobile:mt-[55px]">
           <PrimaryBtn label={btnLabel1} />
