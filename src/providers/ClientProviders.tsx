@@ -8,7 +8,7 @@ const defaultTRef = (key: string) => key;
 defaultTRef.rich = (key: string) => key;
 defaultTRef.markup = (key: string) => key;
 defaultTRef.raw = (key: string) => key;
-defaultTRef.has = (key: string) =>  false;
+defaultTRef.has = (key: string) => false;
 
 export const tRef: { current: ReturnType<typeof useTranslations<never>> } = {
   current: defaultTRef,
@@ -25,15 +25,15 @@ export default function ClientProviders(
   props: ComponentProps<typeof NextIntlClientProvider>,
 ) {
   return (
-      <NextIntlClientProvider
-        defaultTranslationValues={{
-          b: (chunks) => <b>{chunks}</b>,
-          u: (chunks) => <u>{chunks}</u>,
-        }}
-        {...props}
-      >
-        {props.children}
-        <TranslationRefProvider />
-      </NextIntlClientProvider>
+    <NextIntlClientProvider
+      defaultTranslationValues={{
+        b: (chunks) => <b>{chunks}</b>,
+        u: (chunks) => <u>{chunks}</u>,
+      }}
+      {...props}
+    >
+      {props.children}
+      <TranslationRefProvider />
+    </NextIntlClientProvider>
   );
 }

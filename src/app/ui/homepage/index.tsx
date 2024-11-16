@@ -7,9 +7,11 @@ const HomePage = () => {
   const t = useTranslations("banner");
 
   return (
-    <div style={{
-      paddingBottom: "50px"
-    }}>
+    <div
+      style={{
+        paddingBottom: "50px",
+      }}
+    >
       <Banner
         title={t("title")}
         desc={t("desc")}
@@ -18,6 +20,6 @@ const HomePage = () => {
       />
     </div>
   );
-}
+};
 
 export default HomePage;

@@ -8,20 +8,28 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        "gray-alpha-200": "rgba(var(--gray-rgb), 0.145)",
+        "gray-alpha-100": "rgba(var(--gray-rgb), 0.06)",
+        "button-primary-hover": "#ccc",
+        "button-secondary-hover": "#1a1a1a",
+      },
       screens: {
-        'mobile': {'min': '320px', 'max': '767px'},
-        'tablet' : {'min': '768px', 'max': '1199px'},
-        'pc': {'min': '1200px'},
+        'mobile': { 'min': '320px', 'max': '767px' },
+        'tablet': { 'min': '768px', 'max': '1199px' },
+        'pc': { 'min': '1200px' },
       },
       animation: {},
       keyframes: {},
       backgroundImage: {
         'banner-first': 'url(/images/home/banner/background-banner-1.webp)',
-      },  
-      fontFamily:{
-        'regular':['Gilroy'],
-        'medium':['Gilroy-Medium'],
-        'medium-italic':['Gilroy-MediumItalic'],
+      },
+      fontFamily: {
+        'regular': ['Gilroy'],
+        'medium': ['Gilroy-Medium'],
+        'medium-italic': ['Gilroy-MediumItalic'],
         'black': ['Gilroy-Black'],
         'black-italic': ['Gilroy-BlackItalic'],
         'heavy': ['Gilroy-Heavy'],
@@ -37,10 +45,10 @@ module.exports = {
         'thin-italic': ['Gilroy-ThinItalic'],
         'xlight': ['Gilroy-XLight'],
         'xlight-italic': ['Gilroy-XLightItalic'],
-        'semi':['Gilroy-Semi'],
-        'semi-bold':['Gilroy-SemiBold'],
-        'semi-bold-italic':['Gilroy-SemiBoldItalic'],
-       },
+        'semi': ['Gilroy-Semi'],
+        'semi-bold': ['Gilroy-SemiBold'],
+        'semi-bold-italic': ['Gilroy-SemiBoldItalic'],
+      },
     },
   }
 }

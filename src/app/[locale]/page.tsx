@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePage from "../ui/homepage";
 
 export default function IndexPage() {
-  return <HomePage />
+  return <HomePage />;
 }
 
 export const metadata: Metadata = {
