@@ -6,7 +6,7 @@ export default getRequestConfig(async () => {
   return {
     messages: {
       ...(await import(`../../messages/${localeHeader}/common.json`)).default,
-      ...(await import(`../../messages/${localeHeader}/banner.json`)).default,
+      ...(await import(`../../messages/${localeHeader}/homepage.json`)).default,
     },
   };
 });
