@@ -6,8 +6,16 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/ui/**/*.{js,ts,jsx,tsx}',
   ],
+  plugins: [require('tailwindcss-textshadow')],
   theme: {
     extend: {
+      textShadow: {
+        sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+        md: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        lg: '3px 3px 6px rgba(0, 0, 0, 0.5)',
+        xl: '4px 4px 8px rgba(0, 0, 0, 0.5)',
+        custom: '3px 2px 0px rgba(0, 0, 0, 1)',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <div className="p-6 mobile:p-4 text-center text-[#231F20] text-[16px] font-light">
+    <div className="p-6 text-center font-light text-[16px] text-[#231F20] mobile:p-4">
       © Backed by LTS Group
     </div>
   );
-}
+};
 
 export default Footer;

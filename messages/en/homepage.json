@@ -1,6 +1,8 @@
 {
   "homepage": {
     "banner": {
+      "titleType1": "Real-world AI Applications \n For Educational Institutions",
+      "titleType2": "Real-world AI Applications \n For E-commerce Platforms",
       "title": "Real-world AI Applications \n For Every Business",
       "desc": "We're pushing the boundaries of AI, making it more practical, more feasible, and ready to conquer any domain you’re in. Ready to unlock boundless possibilities?",
       "btnLabel1": "Learn More",
@@ -34,6 +36,7 @@
         "sub": "Automatically remove sensitive information from documents, protecting privacy in resumé, contracts, legal papers, and much more."
       }
     },
-    "ctaTitle": "Get Notified\nWhen We Launch"
+    "ctaTitle": "Get Notified\nWhen We Launch",
+    "backerTitle": "THE HUB FOR OUR LATEST\nAI TECHNOLOGIES"
   }
 }
