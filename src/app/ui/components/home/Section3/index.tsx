@@ -49,10 +49,10 @@ const Section3: FC<Props> = ({ title, desc }) => {
     <div className="flex items-center justify-center bg-[#FFE8B2]">
       <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[20px] mobile:py-[45px]">
         <div className="mb-[60px] mobile:mb-[34px]">
-          <h1 className="whitespace-pre-line text-center font-bold text-[65px] leading-[64px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
-          <p className="mobile:[16px] mt-[22px] text-center text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:leading-[19px]">
+          <p className="mobile:[16px] mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:leading-[19px]">
             {desc}
           </p>
         </div>
@@ -80,7 +80,7 @@ const Section3: FC<Props> = ({ title, desc }) => {
           onSwiper={(swiper) => console.log(swiper)}
           className="mobile:max-w-[90%] tablet:max-w-[75%]"
         > */}
-        <div className="flex items-center justify-between gap-[60px] mobile:flex-col mobile:gap-[30px]">
+        <div className="flex items-center justify-center gap-[30px] mobile:flex-col mobile:gap-[30px]">
           {arrSlide?.map((item) => (
             // <SwiperSlide key={item.name} className="mb-[8px]">
             <div
@@ -96,7 +96,7 @@ const Section3: FC<Props> = ({ title, desc }) => {
                 <div className="mb-4 rounded border-[1px] border-[#000] bg-[#EB1773] text-center font-medium text-[18px] text-white">
                   {item.name}
                 </div>
-                <div className="h-[40px] text-center text-[16px] leading-5 text-[#231F20] mobile:h-auto mobile:text-[14px] mobile:leading-4">
+                <div className="h-[40px] text-center font-mono text-[16px] leading-5 text-[#231F20] mobile:h-auto mobile:text-[14px] mobile:leading-4">
                   {item.pos}
                 </div>
               </div>
