@@ -26,7 +26,7 @@ const Backer: FC<Props> = ({ title }) => {
           <div className="h-full w-1/2 border-r border-[#185BEA] py-[30px] text-center font-bold text-[21px] capitalize leading-[108px] text-[#231F20]">
             LTS GROUP
           </div>
-          <div className="w-1/2 py-[30px] text-center font-bold text-[21px] capitalize leading-[36px] text-[#231F20]">
+          <div className="content-center w-1/2 py-[30px] text-center font-bold text-[21px] capitalize leading-[36px] text-[#231F20]">
             LTS GLOBAL DIGITAL SERVICES
           </div>
         </div>

@@ -48,7 +48,7 @@ const Section3: FC<Props> = ({ title, desc }) => {
   return (
     <div className="flex items-center justify-center bg-[#FFE8B2]">
       <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[20px] mobile:py-[45px]">
-        <div className="mb-[60px] mobile:mb-[35px]">
+        <div className="mb-[70px] mobile:mb-[35px]">
           <h1 className="whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>

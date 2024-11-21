@@ -38,11 +38,7 @@ const HomePage = () => {
     },
   ];
   return (
-    <div
-      style={{
-        paddingBottom: "50px",
-      }}
-    >
+    <div className="bg-white">
       <Banner
         title={t("banner.title")}
         desc={t("banner.desc")}
