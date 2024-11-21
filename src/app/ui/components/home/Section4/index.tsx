@@ -18,11 +18,11 @@ const Section4: FC<Props> = ({ title, desc, arrSlide }) => {
   return (
     <div className="flex items-center justify-center bg-[#fff]">
       <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[20px] mobile:py-[45px]">
-        <div className="mb-[60px] mobile:mb-[34px]">
+        <div className="mb-[60px] mobile:mb-[35px]">
           <h1 className="whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
-          <p className="mobile:[16px] mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:leading-[19px]">
+          <p className="mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
             {desc}
           </p>
         </div>
