@@ -13,7 +13,7 @@ const CTA: FC<Props> = ({ title }) => {
         <div className="text-shadow-custom whitespace-pre-line font-bold text-[40px] leading-[45px] text-[#17EB1F] mobile:mb-[36px] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
           {title}
         </div>
-        <div className="flex items-center justify-center gap-[26px] mobile:gap-[18px]">
+        <div className="flex items-center justify-center gap-[26px] mobile:gap-[18px] mobile:flex-col">
           <input
             placeholder="Enter your email"
             type="email"

@@ -24,7 +24,7 @@ const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
             className="text-shadow-custom whitespace-pre-line font-bold text-[65px] leading-[65px] text-[#17EB1F] mobile:text-[30px] mobile:leading-[32px]"
             repeat={Infinity}
           />
-          <p className="mx-auto mt-[22px] w-[70%] font-mono text-[18px] font-normal leading-[21px] text-[#FFFFFF] mobile:mt-[14px] mobile:text-[14px] mobile:leading-[17px]">
+          <p className="mx-auto max-w-[800px] mt-[22px] w-[100%] font-mono text-[18px] font-normal leading-[21px] mobile:max-w-[300px] text-[#FFFFFF] mobile:mt-[14px] mobile:text-[14px] mobile:leading-[17px]">
             {desc}
           </p>
         </div>

@@ -17,7 +17,7 @@ const Section2: FC<Props> = ({ title, desc }) => {
           <h1 className="whitespace-pre-line font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
-          <p className="mt-[20px] font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
+          <p className="mt-[20px] font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[10px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
             {desc}
           </p>
         </div>
