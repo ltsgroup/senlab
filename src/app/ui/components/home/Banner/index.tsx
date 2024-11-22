@@ -6,12 +6,13 @@ import { useTranslations } from "next-intl";
 
 interface Props {
   title: string;
+  titleMobile: string;
   desc: string;
   btnLabel1: string;
   btnLabel2: string;
 }
 
-const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
+const Banner: FC<Props> = ({ titleMobile, title, desc, btnLabel1, btnLabel2 }) => {
   const t = useTranslations("homepage");
   return (
     <div className="flex items-center justify-center bg-[#185BEA]">
@@ -21,7 +22,14 @@ const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
             sequence={[t("banner.titleType1"), 1000, title, 1000]}
             wrapper="h1"
             speed={50}
-            className="text-shadow-custom whitespace-pre-line font-bold text-[65px] leading-[65px] text-[#17EB1F] mobile:text-[30px] mobile:leading-[32px]"
+            className="mobile:hidden text-shadow-custom whitespace-pre-line font-bold text-[65px] leading-[65px] text-[#17EB1F] mobile:text-[30px] mobile:leading-[32px]"
+            repeat={Infinity}
+          />
+          <TypeAnimation
+            sequence={[t("banner.titleType1Mobile"), 1000, titleMobile, 1000]}
+            wrapper="h1"
+            speed={50}
+            className="hidden mobile:block text-shadow-custom whitespace-pre-line font-bold text-[65px] leading-[65px] text-[#17EB1F] mobile:text-[30px] mobile:leading-[32px]"
             repeat={Infinity}
           />
           <p className="mx-auto max-w-[800px] mt-[22px] w-[100%] font-mono text-[18px] font-normal leading-[21px] mobile:max-w-[300px] text-[#FFFFFF] mobile:mt-[14px] mobile:text-[14px] mobile:leading-[17px]">
@@ -29,8 +37,8 @@ const Banner: FC<Props> = ({ title, desc, btnLabel1, btnLabel2 }) => {
           </p>
         </div>
         <div className="mt-[62px] flex justify-center gap-[40px] mobile:mt-[55px] mobile:gap-[20px]">
-          <PrimaryBtn label={btnLabel1} />
-          <SecondaryBtn label={btnLabel2} />
+          <PrimaryBtn label={btnLabel1} className="h-[44px] w-[148px] mobile:h-[30px] mobile:w-[122px]" />
+          <SecondaryBtn label={btnLabel2} className="h-[44px] w-[248px] mobile:h-[30px] mobile:w-[186px]" />
         </div>
       </div>
     </div>

@@ -14,6 +14,7 @@ import Link from "next/link";
 
 interface Props {
   title: string;
+  titleMobile: string;
   desc: string;
 }
 
@@ -44,45 +45,24 @@ const arrSlide = [
   },
 ];
 
-const Section3: FC<Props> = ({ title, desc }) => {
+const Section3: FC<Props> = ({titleMobile, title, desc}) => {
   return (
     <div className="flex items-center justify-center bg-[#FFE8B2]">
       <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[20px] mobile:py-[45px]">
         <div className="mb-[70px] mobile:mb-[35px]">
-          <h1 className="whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="mobile:hidden whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
+          </h1>
+          <h1 className="hidden mobile:block whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+            {titleMobile}
           </h1>
           <p className="mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
             {desc}
           </p>
         </div>
-        {/* <Swiper
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 12,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 12,
-            },
-            1200: {
-              slidesPerView: 4,
-              spaceBetween: 38
-            }
-          }}
-          freeMode={true}
-          pagination={{
-            clickable: true
-          }}
-          modules={[FreeMode]}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
-          className="mobile:max-w-[90%] tablet:max-w-[75%]"
-        > */}
+       
         <div className="flex items-center justify-center gap-[30px] mobile:flex-col mobile:gap-[30px]">
           {arrSlide?.map((item) => (
-            // <SwiperSlide key={item.name} className="mb-[8px]">
             <div
               key={item.name}
               className="flex h-full w-[220px] flex-col justify-between bg-white p-4 shadow-[8px_8px_0px_0px_#EB1773] mobile:shadow-[5px_5px_0px_0px_#EB1773]"
@@ -110,10 +90,8 @@ const Section3: FC<Props> = ({ title, desc }) => {
                 </Link>
               </div>
             </div>
-            // </SwiperSlide>
           ))}
         </div>
-        {/* </Swiper> */}
       </div>
     </div>
   );
