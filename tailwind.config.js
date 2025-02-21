@@ -30,12 +30,13 @@ module.exports = {
         'mobile': { 'min': '320px', 'max': '767px' },
         'tablet': { 'min': '768px', 'max': '1199px' },
         'pc': { 'min': '1200px' },
+        'tablet-large': '800px',
       },
       animation: {},
       keyframes: {},
-      backgroundImage: {
-        'banner-first': 'url(/images/home/banner/background-banner-1.webp)',
-      },
+      // backgroundImage: {
+      //   'banner-first': 'url(/images/home/banner/background-banner-1.webp)',
+      // },
       fontFamily: {
         'spaceMonoRegular': ['Space Mono'],
         'spaceMonoBold': ['Space Mono Bold']

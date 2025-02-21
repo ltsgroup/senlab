@@ -3,6 +3,7 @@ import "../globals.css";
 import { useLocale, useMessages, useTimeZone } from "next-intl";
 import ClientProviders from "@/providers/ClientProviders";
 import Footer from "../ui/components/common/Footer";
+import Header from "../ui/components/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,6 +22,7 @@ export default function RootLayout({
     <ClientProviders messages={messages} locale={locale} timeZone={timeZone}>
       <html lang="en">
         <body>
+          <Header />
           {children}
           <Footer />
         </body>
