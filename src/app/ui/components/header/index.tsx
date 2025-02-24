@@ -221,7 +221,7 @@ function Header() {
 
       <div
         className={cn(
-          "w-full min-h-[93dvh] bg-white overflow-hidden transition-all delay-0 duration-500 ease-in-out px-6 py-9 lg:hidden flex flex-col justify-between",
+          "w-full min-h-[100dvh] bg-white overflow-hidden transition-all delay-0 duration-500 ease-in-out px-6 py-9 lg:hidden flex flex-col justify-between",
           {
             "max-h-0 p-0 min-h-[0]": !isOpen,
             "max-h-screen border-t": isOpen,

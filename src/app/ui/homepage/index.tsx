@@ -6,6 +6,8 @@ import BannerVideo from "./BannerVideo";
 import AIStudioIMGPath from "@/homepage/ai_studio.jpg";
 import LLAMACard from "@/homepage/LLAMA_Card.jpg";
 import latest_ai_news from "@/homepage/latest_ai_news.jpg";
+// import video_building_AI from "@/homepage/video_building_AI.mp4";
+// import video_penguin from "@/homepage/video_penguin.mp4";
 import CardInfo from "./CardInfo";
 import ButtonLinkIncludeArrow from "@/app/ui/components/common/ButtonLinkIncludeArrow";
 
@@ -37,7 +39,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <BannerVideo
-        videoUrl="https://video.fhan5-6.fna.fbcdn.net/o1/v/t2/f2/m69/AQM1eC3JexGWnUogp1iTMtLdhadrI3kgu0YG5xeVeTIleWg_UvXt4tpML4IjkO_oDji-M5VDRg5SG-sUaCFwu9Zd.mp4?efg=eyJ4cHZfYXNzZXRfaWQiOjEyMzM3MjMyOTQzNDUyMjUsInZlbmNvZGVfdGFnIjoieHB2X3Byb2dyZXNzaXZlLkZBQ0VCT09LLi5DMy4xOTA0LmRhc2hfaDI2NC1iYXNpYy1nZW4yXzEwODBwIn0&amp;_nc_ht=video.fhan5-6.fna.fbcdn.net&amp;_nc_cat=104&amp;strext=1&amp;vs=fa5bc49bd1a344e8&amp;_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HT2FDaGh1eU4wb0p2T2tHQUFyazZXblVoRFV1YnY0R0FBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dKQjZoUnROT1dUU0g4b0JBSWNhaUxoakxtMVRidjRHQUFBRhUCAsgBACgAGAAbAogHdXNlX29pbAExEnByb2dyZXNzaXZlX3JlY2lwZQExFQAAJpKgr-uShLEEFQIoAkMzLBdAJVT987ZFohgaZGFzaF9oMjY0LWJhc2ljLWdlbjJfMTA4MHARAHUCAA&amp;ccb=9-4&amp;oh=00_AYCh3ak7U3oG7l7TemrDFoNDga_cTGm47G-ZJ-YuR_U2uQ&amp;oe=67B88BB6&amp;_nc_sid=1d576d"
+        videoUrl={"/homepage/video_penguin.mp4"}
         text={
           <div className="flex flex-col gap-5 items-center justify-center text-white">
             <h1 className="lg:text-[64px] md:text-5xl text-4xl font-bold text-center">
@@ -123,12 +125,12 @@ const HomePage = () => {
           }
         />
       </div>
-      <div className="lg:pt-20 w-full"></div>
+      <div className="pt-14 lg:pt-20 w-full"></div>
 
       <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
 
-      <div className="lg:pt-20 w-full"></div>
-      <div className="max-w-[1349px] mx-auto flex items-center gap-12 px-[72px]">
+      <div className="pt-14 lg:pt-20 w-full"></div>
+      <div className="max-w-[1349px] mx-auto flex items-center gap-12 px-6 lg:px-[72px]">
         <CardInfo
           horizontal
           rotate45Deg
@@ -152,13 +154,13 @@ const HomePage = () => {
           customClassHeader="md:text-4xl tracking-[.01em]"
         />
       </div>
-      <div className="lg:pt-24 w-full"></div>
+      <div className="pt-16 lg:pt-24 w-full"></div>
 
       <BannerVideo
-        videoUrl="https://video.fhan5-6.fna.fbcdn.net/o1/v/t2/f2/m69/AQMAhaYsLRpGCj4b1CSLveFKLiEslQ4rQuzwZ2OugM7knCTXHjFV8VVUS-UtWurzWn4iNJiWc-Q-E9ecot8pcLTh.mp4?efg=eyJ4cHZfYXNzZXRfaWQiOjM0ODEwNTg2ODI5MjA2OSwidmVuY29kZV90YWciOiJ4cHZfcHJvZ3Jlc3NpdmUuRkFDRUJPT0suLkMzLjEyODAuZGFzaF9oMjY0LWJhc2ljLWdlbjJfNzIwcCJ9&_nc_ht=video.fhan5-6.fna.fbcdn.net&_nc_cat=107&strext=1&vs=d5c65ebbc2841f53&_nc_vs=HBkcFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSHVOZWhzSTN6WUJCdGNhQU1oOUVlOG5PNGtrYnY0R0FBQUYVAALIAQAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbKv_3ptqaeARUCKAJDMywXQCoQ5WBBiTcYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCAA&ccb=9-4&oh=00_AYAbGoiBcBdx-nYm6Fiyl4jz11GSye-VmEnJH_qXeYdywQ&oe=67B8C723&_nc_sid=1d576d"
+        videoUrl={"/homepage/video_building_AI.mp4"}
         text={
           <div className="">
-            <h2 className="text-6xl font-medium text-center text-black">
+            <h2 className="lg:text-6xl md:text-5xl text-4xl font-medium text-center text-black">
               Building AI experiences <br /> for everyone
             </h2>
             <p className="p-12 text-[#465a69] text-center">
@@ -175,18 +177,20 @@ const HomePage = () => {
           </div>
         }
       />
-      <div className="lg:pt-24 w-full"></div>
 
+      <div className="pt-12 lg:pt-24 w-full"></div>
       <div className="max-w-[1600px] text-center mx-auto">
-        <h2 className="md:text-5xl text-[#1c2b33]">Latest AI news</h2>
-        <div className="lg:pt-6 w-full"></div>
+        <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] text-[#1c2b33]">
+          Latest AI news
+        </h2>
+        <div className="pt-6 w-full"></div>
         <div className="flex justify-center">
           <ButtonLinkIncludeArrow text={"Visit blog"} rotate45Deg={false} />
         </div>
       </div>
-      <div className="lg:pt-12 w-full"></div>
+      <div className="pt-8 lg:pt-12 w-full"></div>
 
-      <div className="max-w-[1349px] mx-auto flex flex-col lg:flex-row items-center gap-12 px-6">
+      <div className="max-w-[1349px] mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 px-6">
         {latest_ai_news_data?.map((v, i) => {
           return (
             <CardInfo
@@ -207,13 +211,13 @@ const HomePage = () => {
           );
         })}
       </div>
-      <div className="lg:pt-20 w-full"></div>
+      <div className="pt-6 lg:pt-20 w-full"></div>
 
       <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
 
-      <div className="flex flex-col items-center justify-center gap-5 lg:py-24">
-        <div className="flex flex-col items-center justify-center gap-2">
-          <h2 className="text-5xl text-[#1c2b33]">
+      <div className="flex flex-col items-center justify-center gap-5 py-16 lg:py-24 px-6 lg:px-0">
+        <div className="flex flex-col items-center justify-center gap-2 text-center">
+          <h2 className="md:text-5xl md:tracking-[0.012em] tracking-[0.01em] text-5xl text-[#1c2b33]">
             Stay informed about AI at Meta
           </h2>
         </div>

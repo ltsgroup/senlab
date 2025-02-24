@@ -1,8 +1,12 @@
+"use client";
+
 import AkarIconsFacebookFill from "@/icons/AkarIconsFacebookFill";
+import IonIosArrowDown from "@/icons/arrowDownIOS";
 import EntypoSocialLinkedinWithCircle from "@/icons/EntypoSocialLinkedinWithCircle";
 import EntypoSocialYoutubeWithCircle from "@/icons/EntypoSocialYoutubeWithCircle";
 import MaterialSymbolsSearch from "@/icons/MaterialSymbolsSearch";
 import MdiTwitterCircle from "@/icons/MdiTwitterCircle";
+import { cn } from "@/util/utils";
 import Link from "next/link";
 
 const footerLinkData = [
@@ -85,9 +89,9 @@ const footerLinkData = [
 const Footer = () => {
   return (
     <div className="bg-white flex flex-col">
-      <div className="w-full bg-[#ccd1d4] py-[60px]">
-        <div className="max-w-[1440px] mx-auto px-[50px] flex justify-between items-start">
-          <div className="flex max-w-[60%] w-full flex-wrap justify-start">
+      <div className="w-full bg-[#ccd1d4] pt-5 pb-[60px] md:py-[60px]">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-[50px] flex md:flex-row flex-col-reverse justify-between items-start gap-[60px] md:gap-0">
+          <div className="flex md:max-w-[60%] w-full flex-wrap justify-start">
             {footerLinkData?.map((v, i) => {
               return (
                 <div
@@ -99,7 +103,17 @@ const Footer = () => {
                       className="text-[#344854] mb-[10px] tablet-large:mb-[30px]"
                       href={v?.href}
                     >
-                      <span className="text-[22px] leading-7">{v?.header}</span>
+                      <span className="text-[22px] leading-7 block md:flex md:justify-between md:items-center md:w-full">
+                        {v?.header}
+                        <IonIosArrowDown
+                          className={cn(
+                            "-rotate-90 transition-all duration-500 delay-0 ease-in-out",
+                            {
+                              // "-rotate-50": menuHover === v?.id,
+                            },
+                          )}
+                        />
+                      </span>
                     </Link>
                   </div>
 
@@ -126,7 +140,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="flex max-w-[40%] w-full justify-start items-center h-full gap-[25px]">
+          <div className="flex md:max-w-[40%] w-full justify-start items-center h-full gap-[25px]">
             <div className="border-b border-solid border-[#344854] flex items-center justify-start gap-3 w-full">
               <MaterialSymbolsSearch
                 className="text-3xl text-[#344854]"
@@ -138,7 +152,7 @@ const Footer = () => {
                 className="focus:border-none focus:outline-none text-[22px] tracking-[.004em] leading-[1.5] bg-transparent w-full text-[#344854] placeholder:text-[#344854]"
               />
             </div>
-            <div className="flex gap-3 items-start">
+            <div className="hidden md:flex gap-3 items-start">
               <AkarIconsFacebookFill className="text-3xl" />
               <MdiTwitterCircle className="text-3xl" />
               <EntypoSocialLinkedinWithCircle className="text-3xl" />

@@ -29,17 +29,21 @@ function CardInfo({
   return (
     <div
       className={cn("flex flex-col items-start w-full", {
-        "flex-row gap-24 items-center": horizontal,
+        "md:flex-row md:gap-24 items-center": horizontal,
       })}
     >
       <div
         className={cn("rounded-3xl overflow-hidden w-full", {
-          "w-1/2": horizontal,
+          "md:w-1/2 w-full": horizontal,
         })}
       >
         {media}
       </div>
-      <div className={cn("flex flex-col items-start", { "w-1/2": horizontal })}>
+      <div
+        className={cn("flex flex-col items-start", {
+          "md:w-1/2 w-full": horizontal,
+        })}
+      >
         <div className="pt-6 w-full"></div>
         {tag && (
           <p className="text-xs font-extrabold text-[#1c2b33] mb-2">{tag}</p>
@@ -48,7 +52,7 @@ function CardInfo({
         {header && (
           <h3
             className={cn(
-              "md:text-2xl text-[#1c2b33] mb-2 pr-9",
+              "md:text-2xl text-xl tracking-[0] md:tracking-[.005em] text-[#1c2b33] mb-2 pr-9",
               {
                 "pr-12": horizontal,
               },
