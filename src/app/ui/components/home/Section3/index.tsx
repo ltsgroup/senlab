@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
-import s1 from "@/../public/homepage/section3/s1.png";
-import s2 from "@/../public/homepage/section3/s2.png";
+import s1 from "@/../public/homepage/section3/s2.png";
+import s2 from "@/../public/homepage/section3/s1.png";
 import s3 from "@/../public/homepage/section3/s3.png";
 import s4 from "@/../public/homepage/section3/s4.png";
 import linkedin from "@/../public/linkedin.png";
@@ -21,15 +21,15 @@ interface Props {
 const arrSlide = [
   {
     img: s1,
-    name: "Vu Quang Dung",
-    pos: "AI and Semiconductor Specialist",
-    linkin: "/",
+    name: "Andy Nguyen",
+    pos: "Head of Senlab",
+    linkin: "https://www.linkedin.com/in/andynguyen112/",
   },
   {
     img: s2,
-    name: "Nguyen Duy Anh",
-    pos: "Head of AI Services",
-    linkin: "/",
+    name: "Vu Quang Dung",
+    pos: "AI & Semiconductor Specialist",
+    linkin: "https://www.linkedin.com/in/dung-vu-85a521b0/",
   },
   {
     img: s3,
@@ -39,15 +39,15 @@ const arrSlide = [
   },
   {
     img: s4,
-    name: "Nguyen Minh Duc",
-    pos: "AI Engineer",
-    linkin: "/",
+    name: "Le Huy",
+    pos: "R&D Engineer",
+    linkin: "https://www.linkedin.com/in/huy-le-6b2721192/",
   },
 ];
 
 const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
   return (
-    <div className="flex items-center justify-center bg-[#FFE8B2]">
+    <div className="flex items-center justify-center bg-bgColor">
       <div className="mx-auto max-w-[1200px] overflow-hidden py-[100px] mobile:p-[20px] mobile:pt-[45px] mobile:pb-[25px]">
         <div className="mb-[70px] mobile:mb-[35px]">
           <h1 className="mobile:hidden whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
@@ -64,7 +64,7 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
           {arrSlide?.map((item) => (
             <div
               key={item.name}
-              className="flex h-full w-[220px] flex-col justify-between bg-white p-4 shadow-[8px_8px_0px_0px_#EB1773] mobile:shadow-[5px_5px_0px_0px_#EB1773]"
+              className="flex h-full w-[220px] flex-col justify-between bg-white p-4 shadow-[8px_8px_0px_0px_#adb7c1]"
             >
               <div>
                 <Image
@@ -72,7 +72,7 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
                   src={item.img}
                   className="mb-5 aspect-[189/208] w-[189px]"
                 />
-                <div className="mb-4 rounded border-[1px] border-[#000] bg-[#EB1773] text-center font-medium text-[18px] text-white">
+                <div className="mb-4 rounded border-[1px] border-[#000] bg-[#3D3D3A] text-center font-medium text-[18px] text-white">
                   {item.name}
                 </div>
                 <div className="h-[40px] text-center font-mono text-[16px] leading-5 text-[#231F20] mobile:h-auto mobile:text-[14px] mobile:leading-4">
@@ -107,14 +107,14 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
                 className="flex items-center justify-center"
                 style={{ width: "220px" }}
               >
-                <div className="flex h-[405px] w-full flex-col justify-between bg-white p-4 shadow-[8px_8px_0px_0px_#EB1773]">
+                <div className="flex h-[405px] w-full flex-col justify-between bg-white p-4 shadow-[8px_8px_0px_0px_#adb7c1]">
                   <div>
                     <Image
                       alt={item.name}
                       src={item.img}
                       className="mb-5 aspect-[189/208] w-[189px]"
                     />
-                    <div className="mb-4 rounded border-[1px] border-[#000] bg-[#EB1773] text-center font-medium text-[18px] text-white">
+                    <div className="mb-4 rounded border-[1px] border-[#000] bg-[#adb7c1] text-center font-medium text-[18px] text-white">
                       {item.name}
                     </div>
                     <div className="h-[40px] text-center font-mono text-[16px] leading-5 text-[#231F20]">

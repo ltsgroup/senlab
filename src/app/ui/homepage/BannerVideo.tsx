@@ -4,7 +4,13 @@ import MaterialSymbolsPauseRounded from "@/icons/MaterialSymbolsPauseRounded";
 import MaterialSymbolsPlayArrow from "@/icons/MaterialSymbolsPlayArrow";
 
 interface BannerVideoProps {
+  /**
+   * The URL of the video to be displayed in the banner.
+   */
   videoUrl: string;
+  /**
+   * The text to be displayed in the banner.
+   */
   text: ReactNode;
 }
 
