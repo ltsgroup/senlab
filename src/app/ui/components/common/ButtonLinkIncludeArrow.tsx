@@ -75,7 +75,7 @@ function ButtonLinkIncludeArrow({
       </div>
       <div
         className={cn(
-          "font-bold leading-[150%] tracking-[.005em] text-[#1c2b33]",
+          "font-bold leading-[150%] tracking-[.005em]",
           customClassText,
         )}
       >

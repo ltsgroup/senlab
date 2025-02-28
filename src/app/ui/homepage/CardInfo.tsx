@@ -76,7 +76,7 @@ function CardInfo({
       {titleOnTop && title && (
         <h3
           className={cn(
-            "mb-2 pr-9 text-xl tracking-[0] text-[#1c2b33] md:text-2xl md:tracking-[.005em]",
+            "mb-2 pr-9 text-xl tracking-[0] md:text-2xl md:tracking-[.005em]",
             {
               "pr-12": horizontal,
             },
@@ -109,14 +109,12 @@ function CardInfo({
             "w-full md:w-1/2": horizontal,
           })}
         >
-          {tag && (
-            <p className="mb-2 text-xs font-extrabold text-[#1c2b33]">{tag}</p>
-          )}
+          {tag && <p className="mb-2 text-xs font-extrabold">{tag}</p>}
 
           {title && !titleOnTop && (
             <h3
               className={cn(
-                "mb-2 pr-9 text-xl tracking-[0] text-[#1c2b33] md:text-2xl md:tracking-[.005em]",
+                "mb-2 pr-9 text-xl tracking-[0] md:text-2xl md:tracking-[.005em]",
                 {
                   "pr-12": horizontal,
                 },

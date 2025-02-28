@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c2b33;
   --bgColor: #FAF9F5;
 
   --gray-rgb: 0, 0, 0;
@@ -17,9 +17,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --bgColor: #FAF9F5;
+    /* --background: #0a0a0a; */
+    /* --foreground: #ededed; */
+    /* --bgColor: #FAF9F5; */
 
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
@@ -31,10 +31,9 @@
 }
 
 body {
-  /* color: var(--foreground); */
+  color: var(--foreground);
   background: var(--bgColor);
   font-family: Arial, Helvetica, sans-serif;
-  color: #1c1e21;
 }
 
 .text-header-hover {

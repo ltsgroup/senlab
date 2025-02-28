@@ -9,6 +9,7 @@ import Frontier_Math from "@/blog/Frontier_Math.webp";
 import MaterialSymbolsPlayArrow from "@/icons/MaterialSymbolsPlayArrow";
 import { cn } from "@/util/utils";
 import Link from "next/link";
+import useCopyToClipboard from "@/hook/useCopyToClipboard";
 
 interface PageProps {
   slug: string;
@@ -148,6 +149,7 @@ function BlogDetailPage({ slug }: PageProps) {
   const [expandedIndexes, setExpandedIndexes] = useState<number[]>([]);
   const [truncatedIndexes, setTruncatedIndexes] = useState<number[]>([]);
   const textRefs = useRef<(HTMLElement | null)[]>([]);
+  const { copiedText, copyToClipboard } = useCopyToClipboard();
 
   function handlePlay() {
     setIsPlayAudio((pre) => !pre);
@@ -194,7 +196,7 @@ function BlogDetailPage({ slug }: PageProps) {
           </div>
 
           <div className="flex w-full items-center justify-center pt-20">
-            <div className="flex w-full max-w-[504px] items-center justify-between border-t border-solid border-[#1F1F1F] pt-3">
+            <div className="flex w-full max-w-[600px] items-center justify-between border-t border-solid border-[#1F1F1F] pt-3">
               <div className="flex flex-wrap items-center gap-3">
                 <button
                   className="rounded-full bg-[rgb(28,_43,_51)] p-[3px]"
@@ -218,23 +220,22 @@ function BlogDetailPage({ slug }: PageProps) {
               </div>
 
               <div className="relative">
-                <div
-                  className="flex items-center gap-1"
-                  itemType="button"
-                  aria-haspopup="dialog"
-                  aria-expanded="false"
-                  aria-controls="radix-:rc:"
-                  data-state="closed"
-                >
+                <div className="flex items-center gap-1" itemType="button">
                   <span className="text-sm font-medium leading-[0.875rem] tracking-normal">
                     <button
                       type="button"
+                      onClick={() => copyToClipboard("ha ha ha")}
                       className="flex h-[2.5rem] min-h-8 items-center justify-center gap-[0.3em] text-nowrap px-0 text-sm font-medium leading-[0.875rem] tracking-normal outline-offset-2 transition duration-200 ease-linear hover:text-[#707070] focus:outline-none focus:outline focus:outline-1 focus-visible:outline-gray-300 disabled:cursor-not-allowed disabled:text-gray-300"
                     >
                       <ArcticonsEasyshare className="-rotate-45 text-2xl" />
                       Share
                     </button>
                   </span>
+                  {copiedText && (
+                    <div className="absolute bottom-[-30px] left-1/2 -translate-x-1/2 text-nowrap rounded bg-[#1F1F1F] px-2 py-1 text-sm text-white">
+                      Copied
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -337,7 +338,7 @@ function BlogDetailPage({ slug }: PageProps) {
         </section>
 
         <section className="px-6 md:px-[72px]">
-          <div className="flex flex-col items-center rounded-md bg-[#F5F5F5] px-5 py-8 shadow-xl md:py-16">
+          <div className="shadow-elevated-dual flex flex-col items-center rounded-md bg-[#F5F5F5] px-5 py-8 md:py-16">
             <div className="w-full max-w-[580px]">
               <div className="flex flex-col flex-wrap items-center justify-center gap-12">
                 <AuthorList

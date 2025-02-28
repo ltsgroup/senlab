@@ -79,9 +79,7 @@ const HomePage = () => {
           <p className="text-xs font-extrabold text-black">
             PRODUCT EXPERIENCES
           </p>
-          <h2 className="text-center text-5xl text-[#1c2b33]">
-            Innovation from AI at Meta
-          </h2>
+          <h2 className="text-center text-5xl">Innovation from AI at Meta</h2>
         </div>
         <div className="text-center text-[#465a69]">
           We believe AI is for everyone. Explore our latest product
@@ -178,7 +176,7 @@ const HomePage = () => {
       <div className="w-full pt-12 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center gap-2">
         <p className="text-xs font-extrabold text-black">Latest publications</p>
-        <h2 className="text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           Stay up-to-date with the lastest news
         </h2>
         <div className="w-full pt-6"></div>

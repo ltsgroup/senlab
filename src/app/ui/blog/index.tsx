@@ -68,7 +68,7 @@ function BlogPage() {
 
       <div className="w-full pt-16 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1600px] flex-col flex-wrap">
-        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           Featured
         </h2>
 
@@ -130,7 +130,7 @@ function BlogPage() {
 
       <div className="w-full pt-16 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1600px] flex-col flex-wrap px-20 py-12 max-md:px-6">
-        <h2 className="text-left text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="text-left text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           Publications
         </h2>
 

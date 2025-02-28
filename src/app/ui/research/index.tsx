@@ -36,7 +36,7 @@ function ResearchPage() {
       <div className="md:pt-[120px] lg:pb-2 lg:pt-24 max-md:pt-12 max-lg:pb-16">
         <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center px-[72px] text-center max-lg:px-6">
           <div className="flex w-1/2 flex-col flex-wrap items-center max-md:w-full">
-            <h2 className="mb-4 text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+            <h2 className="mb-4 text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
               Beyond Boundaries: AI Research at the Frontier of Innovation
             </h2>
 
@@ -58,7 +58,7 @@ function ResearchPage() {
 
       <div className="w-full pt-16 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap items-center px-6 lg:px-[72px]">
-        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           Research Projects
         </h2>
 
@@ -82,7 +82,7 @@ function ResearchPage() {
 
       <div className="w-full pt-16 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap items-center px-6 lg:px-[72px]">
-        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           AI That works for everyone
         </h2>
 
@@ -109,7 +109,7 @@ function ResearchPage() {
 
       <div className="w-full pt-16 lg:pt-24"></div>
       <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap">
-        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] md:text-5xl md:tracking-[0.012em]">
           Blogs
         </h2>
 

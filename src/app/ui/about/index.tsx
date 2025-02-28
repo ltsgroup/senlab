@@ -83,9 +83,7 @@ function AboutPage() {
 
       {/* Research Teams */}
       <div className="border-b border-solid border-[#141413] px-16 pb-12 md:pb-24 max-md:px-8">
-        <h2 className="text-center text-5xl text-[#1c2b33] max-md:text-2xl">
-          Research Teams
-        </h2>
+        <h2 className="text-center text-5xl max-md:text-2xl">Research Teams</h2>
         <div className="pt-12 md:pt-24"></div>
 
         <div className="flex gap-12 max-md:flex-col">
@@ -118,7 +116,7 @@ function AboutPage() {
       {/* Research Principles */}
       <div className="pt-12 md:pt-24"></div>
       <div className="px-16 max-md:px-8">
-        <h2 className="text-center text-5xl text-[#1c2b33] max-md:text-2xl">
+        <h2 className="text-center text-5xl max-md:text-2xl">
           Research Principles
         </h2>
         <div className="pt-12 md:pt-24"></div>

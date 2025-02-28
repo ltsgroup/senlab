@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
+const { shadow } = require('three/tsl');
 
 module.exports = {
   content: [
@@ -17,6 +18,9 @@ module.exports = {
         lg: '3px 3px 6px rgba(0, 0, 0, 0.5)',
         xl: '4px 4px 8px rgba(0, 0, 0, 0.5)',
         custom: '3px 2px 0px rgba(0, 0, 0, 1)',
+      },
+      boxShadow: {
+        "elevated-dual": "0 12px 25px -6px rgb(0 0 0 / 0.25), 0 -12px 25px -6px rgb(0 0 0 / 0.25)"
       },
       colors: {
         background: "var(--background)",
@@ -40,9 +44,6 @@ module.exports = {
       },
       animation: {},
       keyframes: {},
-      // backgroundImage: {
-      //   'banner-first': 'url(/images/home/banner/background-banner-1.webp)',
-      // },
       fontFamily: {
         'spaceMonoRegular': ['Space Mono'],
         'spaceMonoBold': ['Space Mono Bold']
