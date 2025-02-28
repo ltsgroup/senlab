@@ -10,14 +10,14 @@ function TeamPage() {
       <BannerVideo
         videoUrl={"/homepage/video_penguin.mp4"}
         text={
-          <div className="flex flex-col gap-5 items-center justify-center text-white">
-            <h1 className="lg:text-[64px] md:text-5xl text-4xl font-bold text-center max-md:mx-6">
+          <div className="flex flex-col items-center justify-center gap-5 text-white">
+            <h1 className="text-center text-4xl font-bold md:text-5xl lg:text-[64px] max-md:mx-6">
               Researching AI at the frontier
               <br />
               We, Senlab, focuses on three major aspects of AI: safety,
               alignment, and innovation
             </h1>
-            <div className="flex items-center gap-5 font-bold flex-wrap justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-5 font-bold">
               <button className="rounded-3xl bg-[#0E6CE5] px-5 py-3 text-white">
                 Learn more
               </button>

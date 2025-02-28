@@ -67,12 +67,12 @@ function AboutPage() {
   return (
     <div className="bg-bgColor md:px-12">
       {/* Our Mission */}
-      <div className="px-16 max-md:px-8 py-12 md:py-24">
-        <div className="flex max-md:flex-col max-md:gap-6 border-b border-solid pb-12 md:pb-24 border-[#141413]">
-          <h2 className="w-[40%] font-bold text-4xl max-md:text-2xl max-sm:w-full">
+      <div className="px-16 py-12 md:py-24 max-md:px-8">
+        <div className="flex border-b border-solid border-[#141413] pb-12 md:pb-24 max-md:flex-col max-md:gap-6">
+          <h2 className="w-[40%] text-4xl font-bold max-sm:w-full max-md:text-2xl">
             Our Mission
           </h2>
-          <h2 className="w-[60%] font-bold text-4xl max-md:text-2xl max-sm:w-full">
+          <h2 className="w-[60%] text-4xl font-bold max-sm:w-full max-md:text-2xl">
             Our research teams investigate the safety, inner workings, and
             societal impact of AI models — so that artificial intelligence has a
             positive impact on society as it becomes increasingly advanced and
@@ -82,8 +82,8 @@ function AboutPage() {
       </div>
 
       {/* Research Teams */}
-      <div className="px-16 max-md:px-8 border-b border-solid pb-12 md:pb-24 border-[#141413]">
-        <h2 className="text-5xl max-md:text-2xl text-[#1c2b33] text-center">
+      <div className="border-b border-solid border-[#141413] px-16 pb-12 md:pb-24 max-md:px-8">
+        <h2 className="text-center text-5xl text-[#1c2b33] max-md:text-2xl">
           Research Teams
         </h2>
         <div className="pt-12 md:pt-24"></div>
@@ -93,18 +93,18 @@ function AboutPage() {
             return (
               <div
                 key={v.id}
-                className="flex flex-col gap-4 w-[33%] max-md:w-full"
+                className="flex w-[33%] flex-col gap-4 max-md:w-full"
               >
-                <h2 className="font-bold text-4xl max-md:text-2xl">
+                <h2 className="text-4xl font-bold max-md:text-2xl">
                   {v.title}
                 </h2>
-                <div className="flex flex-col justify-between h-full gap-4 items-start">
-                  <p className="text-xl max-md:text-base leading-[145%]">
+                <div className="flex h-full flex-col items-start justify-between gap-4">
+                  <p className="text-xl leading-[145%] max-md:text-base">
                     {v.content}
                   </p>
                   <Link
                     href={""}
-                    className="hover:bg-[#3D3D3A] hover:text-white transition-all duration-300 delay-0 border-solid border border-[#3D3D3A] flex items-center justify-center px-8 w-fit rounded-xl h-12 max-md:h-10"
+                    className="flex h-12 w-fit items-center justify-center rounded-xl border border-solid border-[#3D3D3A] px-8 transition-all delay-0 duration-300 hover:bg-[#3D3D3A] hover:text-white max-md:h-10"
                   >
                     Learn more
                   </Link>
@@ -118,21 +118,21 @@ function AboutPage() {
       {/* Research Principles */}
       <div className="pt-12 md:pt-24"></div>
       <div className="px-16 max-md:px-8">
-        <h2 className="text-5xl max-md:text-2xl text-[#1c2b33] text-center">
+        <h2 className="text-center text-5xl text-[#1c2b33] max-md:text-2xl">
           Research Principles
         </h2>
         <div className="pt-12 md:pt-24"></div>
 
-        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-12 max-md:flex-col">
+        <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1 max-md:flex-col">
           {researchPrinciples?.map((v) => {
             return (
               <div key={v.id} className="flex flex-col gap-4 max-md:w-full">
-                <h4 className="text-2xl max-md:text-xl leading-[125%] font-medium">{`0${v?.id}`}</h4>
-                <h2 className="font-bold text-4xl max-md:text-2xl leading-[120%">
+                <h4 className="text-2xl font-medium leading-[125%] max-md:text-xl">{`0${v?.id}`}</h4>
+                <h2 className="leading-[120% text-4xl font-bold max-md:text-2xl">
                   {v.title}
                 </h2>
                 <div
-                  className="text-xl max-md:text-base leading-[145%]"
+                  className="text-xl leading-[145%] max-md:text-base"
                   dangerouslySetInnerHTML={{ __html: v?.content }}
                 />
               </div>

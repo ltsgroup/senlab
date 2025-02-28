@@ -53,7 +53,7 @@ function ButtonLinkIncludeArrow({
   return (
     <div
       className={cn(
-        "flex items-center gap-5 cursor-pointer transition-all duration-500 delay-0 ease-in-out",
+        "flex cursor-pointer items-center gap-5 transition-all delay-0 duration-500 ease-in-out",
         {
           "hover:opacity-50": opacityHover,
           "flex-row-reverse": swapIcon,
@@ -63,7 +63,7 @@ function ButtonLinkIncludeArrow({
     >
       <div
         className={cn(
-          "flex items-center border border-solid border-black p-1 rounded-full border-opacity-50 text-black",
+          "flex items-center rounded-full border border-solid border-black border-opacity-50 p-1 text-black",
           customClassIconArrow,
         )}
       >
@@ -75,7 +75,7 @@ function ButtonLinkIncludeArrow({
       </div>
       <div
         className={cn(
-          "text-[#1c2b33] font-bold tracking-[.005em] leading-[150%]",
+          "font-bold leading-[150%] tracking-[.005em] text-[#1c2b33]",
           customClassText,
         )}
       >

@@ -48,14 +48,16 @@ const HomePage = () => {
       <BannerVideo
         videoUrl={"/homepage/video_penguin.mp4"}
         text={
-          <div className="flex flex-col gap-5 items-center justify-center text-white">
-            <h1 className="lg:text-[64px] md:text-5xl text-4xl font-bold text-center max-md:mx-6">
+          <div className="flex flex-col items-center justify-center gap-5 text-white">
+            <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-[56px] max-md:mx-6">
               Researching AI at the frontier
+            </h2>
+            <h3 className="text-center text-2xl font-bold !leading-[120%] md:text-3xl lg:text-[40px] max-md:mx-6">
+              We, Senlab, focuses on three major aspects of AI:
               <br />
-              We, Senlab, focuses on three major aspects of AI: safety,
-              alignment, and innovation
-            </h1>
-            <div className="flex items-center gap-5 font-bold flex-wrap justify-center">
+              safety, alignment, and innovation
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-5 font-bold">
               <button className="rounded-3xl bg-[#0E6CE5] px-5 py-3 text-white">
                 Learn more
               </button>
@@ -74,14 +76,14 @@ const HomePage = () => {
       <div className="pt-24"></div>
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="flex flex-col items-center justify-center gap-2">
-          <p className="text-black font-extrabold text-xs">
+          <p className="text-xs font-extrabold text-black">
             PRODUCT EXPERIENCES
           </p>
-          <h2 className="text-5xl text-[#1c2b33] text-center">
+          <h2 className="text-center text-5xl text-[#1c2b33]">
             Innovation from AI at Meta
           </h2>
         </div>
-        <div className="text-[#465a69] text-center">
+        <div className="text-center text-[#465a69]">
           We believe AI is for everyone. Explore our latest product
           <br />
           releases and start engaging with these AI experiences
@@ -91,7 +93,7 @@ const HomePage = () => {
       </div>
       <div className="pt-12"></div>
 
-      <div className="max-w-[1349px] mx-auto flex flex-col items-stretch gap-12 px-6 lg:px-28 md:flex-row">
+      <div className="mx-auto flex max-w-[1349px] flex-col items-stretch gap-12 px-6 md:flex-row lg:px-28">
         {Array.from({ length: 3 }).map((_, i) => {
           return (
             <CardInfo
@@ -111,19 +113,19 @@ const HomePage = () => {
                   alt={""}
                   width={1000}
                   height={1000}
-                  className="w-full h-auto object-cover"
+                  className="h-auto w-full object-cover"
                 />
               }
             />
           );
         })}
       </div>
-      <div className="pt-14 lg:pt-20 w-full"></div>
+      <div className="w-full pt-14 lg:pt-20"></div>
 
-      <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
+      <hr className="my-1 h-[1px] w-full border-none bg-[#dadde1] text-[#dadde1]" />
 
-      <div className="pt-14 lg:pt-20 w-full"></div>
-      <div className="max-w-[1349px] mx-auto flex max-md:flex-col items-stretch gap-12 px-6 lg:px-[72px]">
+      <div className="w-full pt-14 lg:pt-20"></div>
+      <div className="mx-auto flex max-w-[1349px] items-stretch gap-12 px-6 lg:px-[72px] max-md:flex-col">
         {Array.from({ length: 2 }).map((_, i) => (
           <CardInfo
             key={i}
@@ -144,23 +146,23 @@ const HomePage = () => {
                 alt={""}
                 width={1000}
                 height={1000}
-                className="w-full h-auto object-cover"
+                className="h-auto w-full object-cover"
               />
             }
             customClassTitle="md:text-4xl tracking-[.01em]"
           />
         ))}
       </div>
-      <div className="pt-16 lg:pt-24 w-full"></div>
+      <div className="w-full pt-16 lg:pt-24"></div>
 
       <BannerVideo
         videoUrl={"/homepage/video_building_AI.mp4"}
         text={
           <div className="">
-            <h2 className="lg:text-6xl md:text-5xl text-4xl font-medium text-center text-black">
+            <h2 className="text-center text-4xl font-medium text-black md:text-5xl lg:text-6xl">
               Building AI experiences <br /> for everyone
             </h2>
-            <p className="p-12 text-[#465a69] text-center">
+            <p className="p-12 text-center text-[#465a69]">
               We build, enable, and advocate for open innovation across the
               <br /> Al technology landscape, including software, data and
               models,
@@ -173,20 +175,20 @@ const HomePage = () => {
         }
       />
 
-      <div className="pt-12 lg:pt-24 w-full"></div>
-      <div className="max-w-[1600px] mx-auto flex flex-col items-center justify-center gap-2">
-        <p className="text-black font-extrabold text-xs">Latest publications</p>
-        <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] text-[#1c2b33]">
+      <div className="w-full pt-12 lg:pt-24"></div>
+      <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center gap-2">
+        <p className="text-xs font-extrabold text-black">Latest publications</p>
+        <h2 className="text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
           Stay up-to-date with the lastest news
         </h2>
-        <div className="pt-6 w-full"></div>
+        <div className="w-full pt-6"></div>
         {/* <div className="flex justify-center">
           <ButtonLinkIncludeArrow text={"Visit blog"} rotate45Deg={false} />
         </div> */}
       </div>
-      <div className="pt-8 lg:pt-12 w-full"></div>
+      <div className="w-full pt-8 lg:pt-12"></div>
 
-      <div className="max-w-[1349px] mx-auto flex flex-col lg:flex-row items-stretch gap-8 md:gap-12 px-6">
+      <div className="mx-auto flex max-w-[1349px] flex-col items-stretch gap-8 px-6 md:gap-12 lg:flex-row">
         {latest_ai_news_data?.map((v, i) => {
           return (
             <CardInfo
@@ -200,14 +202,14 @@ const HomePage = () => {
                   alt={""}
                   width={1000}
                   height={1000}
-                  className="w-full h-auto object-cover"
+                  className="h-auto w-full object-cover"
                 />
               }
             />
           );
         })}
       </div>
-      <div className="pt-6 lg:pt-20 w-full"></div>
+      <div className="w-full pt-6 lg:pt-20"></div>
     </div>
   );
 };

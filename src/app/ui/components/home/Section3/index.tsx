@@ -48,19 +48,19 @@ const arrSlide = [
 const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
   return (
     <div className="flex items-center justify-center bg-bgColor">
-      <div className="mx-auto max-w-[1200px] overflow-hidden py-[100px] mobile:p-[20px] mobile:pt-[45px] mobile:pb-[25px]">
+      <div className="mx-auto max-w-[1200px] overflow-hidden py-[100px] mobile:p-[20px] mobile:pb-[25px] mobile:pt-[45px]">
         <div className="mb-[70px] mobile:mb-[35px]">
-          <h1 className="mobile:hidden whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="whitespace-pre-line text-center text-[50px] font-bold leading-[55px] text-[#231F20] mobile:hidden mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
-          <h1 className="hidden mobile:block whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="hidden whitespace-pre-line text-center text-[50px] font-bold leading-[55px] text-[#231F20] mobile:block mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {titleMobile}
           </h1>
           <p className="mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
             {desc}
           </p>
         </div>
-        <div className="mobile:hidden flex items-center justify-center gap-[30px] mobile:flex-row mobile:gap-[15px]">
+        <div className="flex items-center justify-center gap-[30px] mobile:hidden mobile:flex-row mobile:gap-[15px]">
           {arrSlide?.map((item) => (
             <div
               key={item.name}
@@ -72,7 +72,7 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
                   src={item.img}
                   className="mb-5 aspect-[189/208] w-[189px]"
                 />
-                <div className="mb-4 rounded border-[1px] border-[#000] bg-[#3D3D3A] text-center font-medium text-[18px] text-white">
+                <div className="mb-4 rounded border-[1px] border-[#000] bg-[#3D3D3A] text-center text-[18px] font-medium text-white">
                   {item.name}
                 </div>
                 <div className="h-[40px] text-center font-mono text-[16px] leading-5 text-[#231F20] mobile:h-auto mobile:text-[14px] mobile:leading-4">
@@ -99,7 +99,7 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
             slidesPerView={"auto"}
             centeredSlides={true}
             loop={true}
-            className="h-[450px] custom-pagination"
+            className="custom-pagination h-[450px]"
           >
             {arrSlide?.map((item) => (
               <SwiperSlide
@@ -114,7 +114,7 @@ const Section3: FC<Props> = ({ titleMobile, title, desc }) => {
                       src={item.img}
                       className="mb-5 aspect-[189/208] w-[189px]"
                     />
-                    <div className="mb-4 rounded border-[1px] border-[#000] bg-[#adb7c1] text-center font-medium text-[18px] text-white">
+                    <div className="mb-4 rounded border-[1px] border-[#000] bg-[#adb7c1] text-center text-[18px] font-medium text-white">
                       {item.name}
                     </div>
                     <div className="h-[40px] text-center font-mono text-[16px] leading-5 text-[#231F20]">

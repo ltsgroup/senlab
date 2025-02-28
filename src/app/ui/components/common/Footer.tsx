@@ -27,31 +27,31 @@ const Footer = () => {
   }
 
   return (
-    <div className="bg-white flex flex-col">
-      <div className="w-full bg-[#ccd1d4] pt-5 pb-[60px] md:py-[60px]">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-[50px] flex md:flex-row flex-col-reverse justify-between items-start gap-[60px] md:gap-0">
-          <div className="flex md:max-w-[60%] w-full flex-wrap justify-start">
+    <div className="flex flex-col bg-white">
+      <div className="w-full bg-[#ccd1d4] pb-[60px] pt-5 md:py-[60px]">
+        <div className="mx-auto flex max-w-[1440px] flex-col-reverse items-start justify-between gap-[60px] px-6 md:flex-row md:gap-0 md:px-[50px]">
+          <div className="flex w-full flex-wrap justify-start md:max-w-[60%]">
             {routes?.map((v, i) => {
               const isOpen = Boolean(footerMenuExpanded === v?.id);
               return (
                 <div
                   key={i}
                   onClick={() => handleMenuFooterClick(v)}
-                  className="w-full pb-[30px] tablet-large:w-[45%] tablet-large:p-[0_60px_50px_0] flex flex-col"
+                  className="flex w-full flex-col pb-[30px] tablet-large:w-[45%] tablet-large:p-[0_60px_50px_0]"
                 >
-                  <div className="flex justify-between items-center w-full">
+                  <div className="flex w-full items-center justify-between">
                     <Link
-                      className="text-[#344854] mb-[10px] tablet-large:mb-[30px]"
+                      className="mb-[10px] text-[#344854] tablet-large:mb-[30px]"
                       href={v?.href}
                     >
                       <span className="text-[22px] leading-7">{v?.label}</span>
                     </Link>
 
                     {v?.children?.length && (
-                      <div className="flex justify-end items-center">
+                      <div className="flex items-center justify-end">
                         <IonIosArrowDown
                           className={cn(
-                            "-rotate-90 transition-all duration-500 delay-0 ease-in-out md:hidden",
+                            "-rotate-90 transition-all delay-0 duration-500 ease-in-out md:hidden",
                             {
                               "-rotate-50": isOpen,
                             },
@@ -63,7 +63,7 @@ const Footer = () => {
 
                   <div
                     className={cn(
-                      "md:max-h-max md:flex md:flex-col overflow-hidden transition-all delay-0 duration-500 ease-in-out",
+                      "overflow-hidden transition-all delay-0 duration-500 ease-in-out md:flex md:max-h-max md:flex-col",
                       {
                         "max-h-0": !isOpen,
                         "max-h-screen": isOpen,
@@ -74,10 +74,10 @@ const Footer = () => {
                       return (
                         <div
                           key={i}
-                          className="flex justify-between items-start"
+                          className="flex items-start justify-between"
                         >
                           <Link
-                            className="text-[#344854] mb-4 tablet-large:mb-0 hover:underline"
+                            className="mb-4 text-[#344854] hover:underline tablet-large:mb-0"
                             href={v?.href}
                           >
                             <span className="text-[16px] leading-[22px]">
@@ -92,7 +92,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="flex md:max-w-[40%] w-full justify-start items-center h-full gap-[25px]">
+          <div className="flex h-full w-full items-center justify-start gap-[25px] md:max-w-[40%]">
             {/* <div className="border-b border-solid border-[#344854] flex flex-row-reverse md:flex-row items-center justify-start gap-3 w-full">
               <MaterialSymbolsSearch
                 className="text-3xl text-[#344854]"
@@ -104,7 +104,7 @@ const Footer = () => {
                 className="focus:border-none focus:outline-none text-base md:text-[22px] tracking-[.004em] leading-[1.5] bg-transparent w-full text-[#344854] placeholder:text-[#344854]"
               />
             </div> */}
-            <div className="hidden md:flex gap-3 items-start">
+            <div className="hidden items-start gap-3 md:flex">
               <AkarIconsFacebookFill className="text-3xl" />
               <MdiTwitterCircle className="text-3xl" />
               <EntypoSocialLinkedinWithCircle className="text-3xl" />
@@ -115,8 +115,8 @@ const Footer = () => {
       </div>
 
       {/* Policy */}
-      <div className="w-full max-w-[1440px] mx-auto px-[50px] max-md:px-6 flex justify-between items-center">
-        <div className="flex max-md:flex-col gap-5 max-md:gap-0 max-md:text-sm py-5 text-[#344854]">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-[50px] max-md:px-6">
+        <div className="flex gap-5 py-5 text-[#344854] max-md:flex-col max-md:gap-0 max-md:text-sm">
           <Link className="" href="#" target="_blank">
             <span className="">Privacy Policy</span>
           </Link>
@@ -130,11 +130,11 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="md:py-5 max-md:text-sm max-md:flex max-md:justify-between max-md:items-center max-md: flex-col">
+        <div className="max-md: flex-col md:py-5 max-md:flex max-md:items-center max-md:justify-between max-md:text-sm">
           <div className="max-md:py-5">
             LTS &copy; {new Date().getFullYear()}
           </div>
-          <div className="md:hidden flex gap-3 items-start">
+          <div className="flex items-start gap-3 md:hidden">
             <AkarIconsFacebookFill className="text-2xl" />
             <MdiTwitterCircle className="text-2xl" />
             <EntypoSocialLinkedinWithCircle className="text-2xl" />

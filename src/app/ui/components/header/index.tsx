@@ -84,7 +84,7 @@ function Header() {
   return (
     <div
       className={cn(
-        "sticky top-0 z-10 opacity-100 transition-all duration-500 ease-in-out delay-0",
+        "sticky top-0 z-10 opacity-100 transition-all delay-0 duration-500 ease-in-out",
         {
           "opacity-90": isScroll && !isHovering,
           "opacity-100": isOpen,
@@ -95,19 +95,19 @@ function Header() {
       <div
         onMouseLeave={handleHeaderMouseLeave}
         className={cn(
-          "flex px-12 items-center bg-bgColor text-[#344854] min-h-14 tablet:min-h-[60px] relative lg:justify-between max-lg:border-b max-lg:border-solid max-lg:border-gray-400",
+          "relative flex min-h-14 items-center bg-bgColor px-12 text-[#344854] lg:justify-between max-lg:min-h-[60px] max-lg:border-b max-lg:border-solid max-lg:border-gray-400",
         )}
       >
-        <Link href={"/"} className="hidden lg:flex gap-12 cursor-pointer">
+        <Link href={"/"} className="hidden cursor-pointer gap-12 lg:flex">
           <Image
             src={logo}
             alt="logo"
-            className="w-full h-[48px] object-cover rounded-lg"
+            className="h-[48px] w-full rounded-lg object-cover"
             width={1000}
             height={1000}
           />
         </Link>
-        <div className="max-lg:hidden flex gap-12">
+        <div className="flex gap-12 max-lg:hidden">
           {routes?.map((v) => {
             const isExpanded = menuHover == v?.id && isHovering;
 
@@ -120,7 +120,7 @@ function Header() {
                 onMouseEnter={() =>
                   handleLinkMenuMouseEnter(v?.id, v?.children ?? [])
                 }
-                className="cursor-pointer text-header-hover flex items-center gap-2 font-normal text-base group"
+                className="text-header-hover group flex cursor-pointer items-center gap-2 text-base font-normal"
               >
                 <div>{v?.label}</div>
                 <div className="IonIosArrowDown">
@@ -134,7 +134,7 @@ function Header() {
         {/* DROP DOWN MENU */}
         <div
           className={cn(
-            "absolute left-0 top-[56px] bg-bgColor w-full overflow-hidden text-[#344854] border-solid border-gray-400 transition-all duration-500 ease-in-out delay-0",
+            "absolute left-0 top-[56px] w-full overflow-hidden border-solid border-gray-400 bg-bgColor text-[#344854] transition-all delay-0 duration-500 ease-in-out max-lg:hidden",
             {
               "max-h-0": !isHovering,
               "max-h-screen border-t": isHovering,
@@ -142,14 +142,14 @@ function Header() {
           )}
         >
           {childMenu && (
-            <div className="flex flex-col items-start justify-center px-32 gap-5 py-10 pl-[58%]">
+            <div className="flex flex-col items-start justify-center gap-5 px-32 py-10 pl-[58%]">
               {childMenu?.map((v) => {
                 return (
                   <Link
                     key={v?.id}
                     href={createHref(v?.href)}
                     onClick={handleMenuChildClick}
-                    className="inline-block px-12 py-4 text-header-hover text-base font-normal !p-0"
+                    className="text-header-hover inline-block !p-0 px-12 py-4 text-base font-normal"
                   >
                     {v?.label}
                   </Link>
@@ -159,22 +159,22 @@ function Header() {
           )}
         </div>
 
-        <div className="text-center w-full lg:hidden">Icon</div>
+        <div className="w-full text-center lg:hidden">Icon</div>
         <button
-          className="relative h-5 flex flex-col justify-between items-center lg:hidden"
+          className="relative flex h-5 flex-col items-center justify-between lg:hidden"
           onClick={() => setIsOpen((pre) => !pre)}
         >
           <div
             className={cn(
-              "w-6 h-[2px] bg-black rounded transition-all duration-500 delay-0 ease-in-out",
+              "h-[2px] w-6 rounded bg-black transition-all delay-0 duration-500 ease-in-out",
               {
-                "rotate-45 translate-y-[5px]": isOpen,
+                "translate-y-[5px] rotate-45": isOpen,
               },
             )}
           />
           <div
             className={cn(
-              "w-6 h-[2px] bg-black rounded transition-all duration-500 delay-0 ease-in-out",
+              "h-[2px] w-6 rounded bg-black transition-all delay-0 duration-500 ease-in-out",
               {
                 "opacity-0": isOpen,
               },
@@ -182,9 +182,9 @@ function Header() {
           />
           <div
             className={cn(
-              "w-6 h-[2px] bg-black rounded transition-all duration-500 delay-0 ease-in-out",
+              "h-[2px] w-6 rounded bg-black transition-all delay-0 duration-500 ease-in-out",
               {
-                "-rotate-45 -translate-y-[13px]": isOpen,
+                "-translate-y-[13px] -rotate-45": isOpen,
               },
             )}
           />
@@ -194,9 +194,9 @@ function Header() {
       {/* BACKDROP */}
       <div
         className={cn(
-          "fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 -z-10 transition-all duration-500 ease-in-out delay-0 backdrop-blur-[2px]",
+          "fixed left-0 top-0 -z-10 h-full w-full bg-black bg-opacity-50 backdrop-blur-[2px] transition-all delay-0 duration-500 ease-in-out",
           {
-            "opacity-0 w-0 h-0": !isHovering,
+            "h-0 w-0 opacity-0": !isHovering,
           },
         )}
       />
@@ -204,27 +204,27 @@ function Header() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "w-full min-h-[calc(100dvh_-_56px)] bg-bgColor overflow-hidden transition-all delay-0 duration-500 ease-in-out px-6 py-9 lg:hidden flex flex-col justify-between",
+          "flex min-h-[calc(100dvh_-_56px)] w-full flex-col justify-between overflow-hidden bg-bgColor px-6 py-9 transition-all delay-0 duration-500 ease-in-out lg:hidden",
           {
-            "max-h-0 p-0 min-h-[0]": !isOpen,
+            "max-h-0 min-h-[0] p-0": !isOpen,
             "max-h-screen border-t": isOpen,
           },
         )}
       >
-        <div className="flex flex-col items-start justify-start gap-9 mt-10 text-[#505e6b] overflow-y-scroll">
+        <div className="mt-10 flex flex-col items-start justify-start gap-9 overflow-y-scroll text-[#505e6b]">
           {routes?.map((v) => {
             return (
               <div key={v?.id} className="w-full">
                 <Link
                   href={createHref(v?.href)}
                   onClick={(e) => handleMobileMenuClick(e, v)}
-                  className="flex justify-between items-center text-2xl font-normal tracking-[0.1em] w-full"
+                  className="flex w-full items-center justify-between text-2xl font-normal tracking-[0.1em]"
                 >
                   {v?.label}
                   {v?.children?.length ? (
                     <IonIosArrowDown
                       className={cn(
-                        "-rotate-90 transition-all duration-500 delay-0 ease-in-out",
+                        "-rotate-90 transition-all delay-0 duration-500 ease-in-out",
                         {
                           "-rotate-50": menuHover === v?.id,
                         },
@@ -235,7 +235,7 @@ function Header() {
 
                 <div
                   className={cn(
-                    "flex flex-col items-start justify-start gap-5 pt-10 w-full transition-all delay-0 duration-500 ease-in-out overflow-hidden",
+                    "flex w-full flex-col items-start justify-start gap-5 overflow-hidden pt-10 transition-all delay-0 duration-500 ease-in-out",
                     {
                       "max-h-0 p-0": v?.id !== menuHover,
                       "max-h-screen border-t": v?.id === menuHover,
@@ -248,7 +248,7 @@ function Header() {
                         key={v?.id}
                         href={createHref(v?.href)}
                         onClick={handleMobileMenuChildClick}
-                        className="inline-block px-12 py-4 text-header-hover text-base font-normal !p-0"
+                        className="text-header-hover inline-block !p-0 px-12 py-4 text-base font-normal"
                       >
                         {v?.label}
                       </Link>
@@ -260,7 +260,7 @@ function Header() {
           })}
         </div>
 
-        <div className="border-t pt-4 pb-12">
+        <div className="border-t pb-12 pt-4">
           <button className="rounded-3xl bg-[#0E6CE5] px-5 py-3 text-white">
             Try LTS AI
           </button>

@@ -43,7 +43,7 @@ function ProjectCard({
   return (
     <Link
       href={url}
-      className="flex flex-col flex-wrap items-start min-w-[1/3] group h-full"
+      className="group flex h-full min-w-[1/3] flex-col flex-wrap items-start"
     >
       <div className="overflow-hidden rounded-lg">
         <Image
@@ -51,14 +51,14 @@ function ProjectCard({
           alt=""
           width={1000}
           height={1000}
-          className="w-full h-auto object-cover group-hover:scale-125 transition-transform duration-500 delay-0 ease-in-out"
+          className="h-auto w-full object-cover transition-transform delay-0 duration-500 ease-in-out group-hover:scale-125"
         />
       </div>
-      <div className="flex flex-col flex-wrap items-start pt-4 w-full">
-        <div className="mb-4 md:pr-8 font-medium md:text-lg text-base w-full">
+      <div className="flex w-full flex-col flex-wrap items-start pt-4">
+        <div className="mb-4 w-full text-base font-medium md:pr-8 md:text-lg">
           {title}
         </div>
-        <div className="flex flex-wrap gap-y-2 gap-x-3 text-sm leading-5 w-full md:pr-3">
+        <div className="flex w-full flex-wrap gap-x-3 gap-y-2 text-sm leading-5 md:pr-3">
           <div>Release</div>
           <div className="text-[#707070]">
             {dayjs(timeRelease).format("MMM D, YYYY")}

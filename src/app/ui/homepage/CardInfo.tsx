@@ -72,11 +72,11 @@ function CardInfo({
   subTag,
 }: CardInfoProps) {
   return (
-    <div className={cn("flex flex-col items-start w-full h-full")}>
+    <div className={cn("flex h-full w-full flex-col items-start")}>
       {titleOnTop && title && (
         <h3
           className={cn(
-            "md:text-2xl text-xl tracking-[0] md:tracking-[.005em] text-[#1c2b33] mb-2 pr-9",
+            "mb-2 pr-9 text-xl tracking-[0] text-[#1c2b33] md:text-2xl md:tracking-[.005em]",
             {
               "pr-12": horizontal,
             },
@@ -88,35 +88,35 @@ function CardInfo({
       )}
 
       <div
-        className={cn("flex flex-col items-start w-full h-full", {
-          "md:flex-row md:gap-24 items-center": horizontal,
+        className={cn("flex h-full w-full flex-col items-start", {
+          "items-center md:flex-row md:gap-24": horizontal,
         })}
       >
         <div
-          className={cn("rounded-3xl overflow-hidden w-full", {
-            "md:w-1/2 w-full": horizontal,
+          className={cn("w-full overflow-hidden rounded-3xl", {
+            "w-full md:w-1/2": horizontal,
           })}
         >
           {media}
         </div>
         <div
-          className={cn("pt-6 w-full", {
-            "max-md:block hidden": horizontal,
+          className={cn("w-full pt-6", {
+            "hidden max-md:block": horizontal,
           })}
         ></div>
         <div
           className={cn("flex flex-col items-start", {
-            "md:w-1/2 w-full": horizontal,
+            "w-full md:w-1/2": horizontal,
           })}
         >
           {tag && (
-            <p className="text-xs font-extrabold text-[#1c2b33] mb-2">{tag}</p>
+            <p className="mb-2 text-xs font-extrabold text-[#1c2b33]">{tag}</p>
           )}
 
           {title && !titleOnTop && (
             <h3
               className={cn(
-                "md:text-2xl text-xl tracking-[0] md:tracking-[.005em] text-[#1c2b33] mb-2 pr-9",
+                "mb-2 pr-9 text-xl tracking-[0] text-[#1c2b33] md:text-2xl md:tracking-[.005em]",
                 {
                   "pr-12": horizontal,
                 },
@@ -128,18 +128,18 @@ function CardInfo({
           )}
 
           {content && (
-            <p className="text-[#465a69] max-w-[91.666%] mb-6">{content}</p>
+            <p className="mb-6 max-w-[91.666%] text-[#465a69]">{content}</p>
           )}
 
           {subTag && (
-            <p className="text-xs font-extrabold text-[#6B9690] mb-4">
+            <p className="mb-4 text-xs font-extrabold text-[#6B9690]">
               {subTag}
             </p>
           )}
 
           <div className="flex flex-wrap items-center gap-5 font-bold">
             {textButton && textButton?.length && (
-              <button className="rounded-3xl bg-[#0E6CE5] px-4 py-[10] text-white hover:bg-[#0050b3] transition-all duration-500 delay-0">
+              <button className="rounded-3xl bg-[#0E6CE5] px-4 py-[10] text-white transition-all delay-0 duration-500 hover:bg-[#0050b3]">
                 {textButton}
               </button>
             )}

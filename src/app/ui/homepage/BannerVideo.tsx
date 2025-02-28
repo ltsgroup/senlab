@@ -32,7 +32,7 @@ const BannerVideo = ({ videoUrl, text }: BannerVideoProps) => {
         {/* Video */}
         <video
           src={videoUrl}
-          className="w-full h-[1349px] md:h-auto object-cover"
+          className="h-[1349px] w-full object-cover md:h-auto"
           autoPlay
           muted
           loop
@@ -44,18 +44,18 @@ const BannerVideo = ({ videoUrl, text }: BannerVideoProps) => {
 
         {/* Play button */}
         <button
-          className="rounded-full border-2 border-solid border-white p-3 absolute right-8 bottom-8 bg-[rgb(28,_43,_51)] opacity-50"
+          className="absolute bottom-8 right-8 rounded-full border-2 border-solid border-white bg-[rgb(28,_43,_51)] p-3 opacity-50"
           onClick={handlePlay}
         >
           {isPlaying ? (
-            <MaterialSymbolsPlayArrow className="text-white text-3xl" />
+            <MaterialSymbolsPlayArrow className="text-3xl text-white" />
           ) : (
-            <MaterialSymbolsPauseRounded className="text-white text-3xl rotate-180" />
+            <MaterialSymbolsPauseRounded className="rotate-180 text-3xl text-white" />
           )}
         </button>
 
         {/* Text */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1349px] z-[2] w-full">
+        <div className="absolute left-1/2 top-1/2 z-[2] w-full max-w-[1349px] -translate-x-1/2 -translate-y-1/2">
           {text}
         </div>
       </div>

@@ -14,7 +14,7 @@ const Section2: FC<Props> = ({ title, desc }) => {
     <div className="flex items-center justify-center bg-[#17EB1F]">
       <div className="mx-auto flex max-w-[1200px] justify-between py-[100px] mobile:block mobile:p-[20px] mobile:py-[45px]">
         <div className="w-[45%] mobile:mb-[35px] mobile:w-full">
-          <h1 className="whitespace-pre-line font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="whitespace-pre-line text-[50px] font-bold leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
           <p className="mt-[20px] font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[10px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">

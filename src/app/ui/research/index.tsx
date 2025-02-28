@@ -33,15 +33,15 @@ const dataAI = [
 function ResearchPage() {
   return (
     <div className="bg-bgColor">
-      <div className="max-md:pt-12 lg:pb-2 lg:pt-24 max-lg:pb-16 md:pt-[120px]">
-        <div className="flex flex-col items-center justify-center text-center max-w-[1600px] mx-auto px-[72px] max-lg:px-6">
-          <div className="w-1/2 max-md:w-full flex flex-col flex-wrap items-center">
-            <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] mb-4 text-[#1c2b33]">
+      <div className="md:pt-[120px] lg:pb-2 lg:pt-24 max-md:pt-12 max-lg:pb-16">
+        <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center px-[72px] text-center max-lg:px-6">
+          <div className="flex w-1/2 flex-col flex-wrap items-center max-md:w-full">
+            <h2 className="mb-4 text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
               Beyond Boundaries: AI Research at the Frontier of Innovation
             </h2>
 
-            <div className="w-4/6 max-md:w-full flex flex-wrap flex-col items-start">
-              <div className="text-center text-[#465a69] text-base tracking-normal leading-[150%] my-4">
+            <div className="flex w-4/6 flex-col flex-wrap items-start max-md:w-full">
+              <div className="my-4 text-center text-base leading-[150%] tracking-normal text-[#465a69]">
                 <p>
                   We&apos;re building a future where everyone has access to the
                   knowledge and tools to make Al work for their unique needs and
@@ -52,18 +52,18 @@ function ResearchPage() {
           </div>
         </div>
       </div>
-      <div className="pt-0 lg:pt-24 w-full"></div>
+      <div className="w-full pt-0 lg:pt-24"></div>
 
-      <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
+      <hr className="my-1 h-[1px] w-full border-none bg-[#dadde1] text-[#dadde1]" />
 
-      <div className="pt-16 lg:pt-24 w-full"></div>
-      <div className="flex flex-col flex-wrap items-center px-6 lg:px-[72px] max-w-[1349px] mx-auto">
-        <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] mb-4 text-[#1c2b33] text-center">
+      <div className="w-full pt-16 lg:pt-24"></div>
+      <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap items-center px-6 lg:px-[72px]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
           Research Projects
         </h2>
 
-        <div className="pt-14 lg:pt-20 w-full"></div>
-        <div className="max-w-[1349px] mx-auto flex max-md:flex-col items-stretch gap-12 cursor-pointer">
+        <div className="w-full pt-14 lg:pt-20"></div>
+        <div className="mx-auto flex max-w-[1349px] cursor-pointer items-stretch gap-12 max-md:flex-col">
           {dataAI.map((v, i) => (
             <ProjectCard
               key={i}
@@ -76,18 +76,18 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-      <div className="pt-16 lg:pt-24 w-full"></div>
+      <div className="w-full pt-16 lg:pt-24"></div>
 
-      <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
+      <hr className="my-1 h-[1px] w-full border-none bg-[#dadde1] text-[#dadde1]" />
 
-      <div className="pt-16 lg:pt-24 w-full"></div>
-      <div className="flex flex-col flex-wrap items-center px-6 lg:px-[72px] max-w-[1349px] mx-auto">
-        <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] mb-4 text-[#1c2b33] text-center">
+      <div className="w-full pt-16 lg:pt-24"></div>
+      <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap items-center px-6 lg:px-[72px]">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
           AI That works for everyone
         </h2>
 
-        <div className="w-4/6 max-md:w-full flex flex-wrap flex-col items-start">
-          <div className="text-center text-[#465a69] text-base tracking-normal leading-[150%] my-4">
+        <div className="flex w-4/6 flex-col flex-wrap items-start max-md:w-full">
+          <div className="my-4 text-center text-base leading-[150%] tracking-normal text-[#465a69]">
             <p>
               Emphasis on human-Al collaboration. Instead of focusing solely on
               making fully autonomous Al systems, we are excited to build
@@ -103,18 +103,18 @@ function ResearchPage() {
           </div>
         </div>
       </div>
-      <div className="pt-16 lg:pt-24 w-full"></div>
+      <div className="w-full pt-16 lg:pt-24"></div>
 
-      <hr className="border-none bg-[#dadde1] text-[#dadde1] h-[1px] w-full my-1" />
+      <hr className="my-1 h-[1px] w-full border-none bg-[#dadde1] text-[#dadde1]" />
 
-      <div className="pt-16 lg:pt-24 w-full"></div>
-      <div className="max-w-[1349px] mx-auto flex flex-col flex-wrap">
-        <h2 className="md:text-5xl md:tracking-[0.012em] text-4xl tracking-[0.01em] mb-4 text-[#1c2b33] text-center">
+      <div className="w-full pt-16 lg:pt-24"></div>
+      <div className="mx-auto flex max-w-[1349px] flex-col flex-wrap">
+        <h2 className="mb-4 text-center text-4xl tracking-[0.01em] text-[#1c2b33] md:text-5xl md:tracking-[0.012em]">
           Blogs
         </h2>
 
-        <div className="pt-14 lg:pt-20 w-full"></div>
-        <div className="flex max-md:flex-col items-stretch gap-12 px-6 lg:px-[72px]">
+        <div className="w-full pt-14 lg:pt-20"></div>
+        <div className="flex items-stretch gap-12 px-6 lg:px-[72px] max-md:flex-col">
           {Array.from({ length: 4 }).map((_, i) => (
             <CardInfo
               key={i}
@@ -126,7 +126,7 @@ function ResearchPage() {
                   alt={""}
                   width={1000}
                   height={1000}
-                  className="w-full h-auto object-cover"
+                  className="h-auto w-full object-cover"
                 />
               }
               customClassTitle="md:text-2xl text-xl tracking-[.01em]"
@@ -134,7 +134,7 @@ function ResearchPage() {
           ))}
         </div>
       </div>
-      <div className="pt-16 lg:pt-24 w-full"></div>
+      <div className="w-full pt-16 lg:pt-24"></div>
     </div>
   );
 }

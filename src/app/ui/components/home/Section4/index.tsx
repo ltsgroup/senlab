@@ -20,10 +20,10 @@ const Section4: FC<Props> = ({ titleMobile, title, desc, arrSlide }) => {
     <div className="flex items-center justify-center bg-[#fff]">
       <div className="mx-auto max-w-[1200px] py-[100px] mobile:p-[20px] mobile:py-[45px]">
         <div className="mb-[60px] mobile:mb-[35px]">
-          <h1 className="mobile:hidden whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="whitespace-pre-line text-center text-[50px] font-bold leading-[55px] text-[#231F20] mobile:hidden mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {title}
           </h1>
-          <h1 className="hidden mobile:block whitespace-pre-line text-center font-bold text-[50px] leading-[55px] text-[#231F20] mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
+          <h1 className="hidden whitespace-pre-line text-center text-[50px] font-bold leading-[55px] text-[#231F20] mobile:block mobile:text-center mobile:text-[26px] mobile:leading-[30px]">
             {titleMobile}
           </h1>
           <p className="mt-[20px] text-center font-mono text-[18px] font-normal leading-[21px] text-[#231F20] mobile:mt-[14px] mobile:text-center mobile:text-[16px] mobile:leading-[19px]">
@@ -42,7 +42,7 @@ const Section4: FC<Props> = ({ titleMobile, title, desc, arrSlide }) => {
                   src={item.img}
                   className={`${arrSlide.length - 1 !== index ? "aspect-[1]" : "aspect-[266/231]"} mb-5 w-[189px]`}
                 />
-                <div className="mb-4 text-center font-medium text-[18px] text-white">
+                <div className="mb-4 text-center text-[18px] font-medium text-white">
                   {item.title}
                 </div>
                 <div className="h-[160px] text-center font-mono text-[16px] font-normal leading-5 text-white mobile:h-[100px] mobile:text-[14px] mobile:leading-4">
